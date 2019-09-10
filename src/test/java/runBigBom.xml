@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" parallel="tests">
+	<test name="Login BigBom on Chrome">
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="2.46" />
+		<parameter name="url" value="https://www.beecow.com" />
+		<classes>
+			<class name="com.bigbom.testcase.LoginScript" />
+<!-- 			<class name="com.bigbom.testcase.DashboardScript" /> -->
+
+
+		</classes>
+	</test>
+	<!-- <test name="Login Bigbom on Firefox"> -->
+	<!-- <parameter name="browser" value="firefox" /> -->
+	<!-- <parameter name="version" value="0.21.0" /> -->
+	<!-- <parameter name="url" value="http://bigbom.com" /> -->
+	<!-- <classes> -->
+	<!-- <class name="com.bigbom.testcase.LogInScript" /> -->
+	<!-- </classes> -->
+	<!-- </test> -->
+</suite> 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.beecow.testcase.CreateProductScript">
+        <methods>
+          <include name="TC_30"/>
+          <include name="TC_24"/>
+          <include name="TC_25"/>
+          <include name="TC_33"/>
+          <include name="TC_34"/>
+          <include name="TC_28"/>
+          <include name="TC_29"/>
+          <include name="TC_26"/>
+          <include name="TC_27"/>
+          <include name="TC_31"/>
+          <include name="TC_32"/>
+        </methods>
+      </class> <!-- com.beecow.testcase.CreateProductScript -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
