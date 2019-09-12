@@ -8,9 +8,9 @@ import com.bigbom.ui.LoginPageUI;
 
 import CommonPage.commonFunction;
 
-public class LoginPage extends commonFunction {
+public class SignupPage extends commonFunction {
 
-	public LoginPage(WebDriver driver) {
+	public SignupPage(WebDriver driver) {
 		super(driver);
 	}
 
@@ -18,10 +18,10 @@ public class LoginPage extends commonFunction {
 		executeScriptBrowser(value);
 	}
 
-	public LoginPage clickdangnhap() {
+	public SignupPage clickdangnhap() {
 		waitVisible(HomePageUI.DANGNHAP_TXT);
 		click(HomePageUI.DANGNHAP_TXT);
-		return PageFactory.initElements(driver, LoginPage.class);
+		return PageFactory.initElements(driver, SignupPage.class);
 	}
 
 //	private  void ctrlAEmail() {

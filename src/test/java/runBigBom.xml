@@ -2,7 +2,7 @@
 <suite name="Suite" parallel="tests">
 	<test name="Login BigBom on Chrome">
 		<parameter name="browser" value="chrome" />
-		<parameter name="version" value="2.46" />
+		<parameter name="version" value="77.0.3865.40" />
 		<parameter name="url" value="https://www.beecow.com" />
 		<classes>
 			<class name="com.bigbom.testcase.LoginScript" />
