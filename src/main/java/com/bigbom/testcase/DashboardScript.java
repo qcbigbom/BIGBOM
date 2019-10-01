@@ -3,6 +3,9 @@ package com.bigbom.testcase;
 import static org.testng.Assert.assertEquals;
 
 import java.awt.AWTException;
+import java.awt.Robot;
+import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -25,7 +28,7 @@ import com.bigbom.ui.SignupPageUI;
 import CommonPage.Commontestcase;
 import ObjectPageJson.JsonData;
 
-public class SignupScript extends Commontestcase {
+public class DashboardScript extends Commontestcase {
 	WebDriver driver;
 	SignupPage signupPage;
 	HomePage homePage;
@@ -34,10 +37,10 @@ public class SignupScript extends Commontestcase {
 	String emailRandom, displayNameRandom, emailIncorrectMsg, emailNotDocCom, emailVarchar, emailBeforeA, emailNotCom,
 			emailAlready, emailBlankSpace, emailOnlyGmailDocCom, emailAlreadyMsg, emailCorrect, emailIncorrect,
 			phoneNumberIncorrectMsg, phoneIncorrect, phoneCorrect, passwordIncorrectMsg, passwordNotEnoughtCharacter,
-			urlYopmail, verifyAcountMsg, otpInvalid, otpVarchar, otpMustNumberMsg, otpInvalidMsg, bigbomConfirmMsg,
+			passwordCorrect, verifyAcountMsg, otpInvalid, otpVarchar, otpMustNumberMsg, otpInvalidMsg, bigbomConfirmMsg,
 			tilePageOTP, registerSuccessfulMsg, welcomeAccountMsg, welcomeToBigbomMsg, getDayStartsFreeMsg,
-			getFreeTrialStartedMsg, activeSuccessfulMsg, resendOTPMsg, titleYopmail;
-	static String yopMail, numberOTP, passwordSignupCorrect;
+			getFreeTrialStartedMsg, activeSuccessfulMsg;
+	static String yopMail, numberOTP;
 
 	@Parameters({ "browser", "version", "url" })
 	@BeforeClass
@@ -50,7 +53,7 @@ public class SignupScript extends Commontestcase {
 		// password
 		passwordIncorrectMsg = "Password must contain at least 6 characters";
 		passwordNotEnoughtCharacter = "1#B23";
-		passwordSignupCorrect = "123456";
+		passwordCorrect = "123456";
 		// Email
 		emailIncorrectMsg = "Email invalid";
 		emailVarchar = "Bibom VN";
@@ -69,7 +72,6 @@ public class SignupScript extends Commontestcase {
 		otpInvalidMsg = "OTP code is invalid";
 		bigbomConfirmMsg = "Chào mừng bạn đã đến với hệ thống Bigbom. Để bắt đầu tận hưởng những tính năng tuyệt vời mà chúng tôi cung cấp, hãy nhập vào mã kích hoạt sau đây:";
 		tilePageOTP = "Bigbom - The Pioneer of Blockchain Advertising Technology";
-		resendOTPMsg = "Verify email sent, please check your mailbox";
 		// Messenger
 		registerSuccessfulMsg = "Verification Successful!";
 		welcomeAccountMsg = "Congratulations! You have successfully verified your account";
@@ -77,16 +79,13 @@ public class SignupScript extends Commontestcase {
 		getDayStartsFreeMsg = "Congratulation! Your 14-day free trial starts today. The trial version offers unlimited access to the full power of Bigbom. You can upgrade at any time during your trial.";
 		activeSuccessfulMsg = "Active Successful!";
 		getFreeTrialStartedMsg = "Congratulation! Your 14-day free trial started! Thank you.";
-		// url
-		urlYopmail = "http://www.yopmail.com/en/";
 		data = getDataJson(".\\Data\\Bigbom.json");
-		titleYopmail = "YOPmail - Inbox";
 		inititalReport("Signup.html");
 	}
 
 	@BeforeMethod
 	public void beforeMethod() {
-		emailRandom = "bigbomqctest" + randomName() + "@yopmail.com";
+		emailRandom = "bigbomqc" + randomName() + "@yopmail.com";
 		displayNameRandom = "qcbigbom" + randomName();
 	}
 
@@ -148,7 +147,7 @@ public class SignupScript extends Commontestcase {
 	@Test
 	public void TC_AT05_CheckValidateNumberPhoneFields() throws InterruptedException {
 		logTestCase("TC_AT05_CheckValidateNumberPhoneFields");
-		signupPage.iputPassword(passwordSignupCorrect);
+		signupPage.iputPassword(passwordCorrect);
 		signupPage.iputPhone(phoneIncorrect);
 		signupPage.hoverTooltipPhone();
 		verifyEqual(signupPage.getDynamicText(phoneNumberIncorrectMsg), "Phone invalid");
@@ -201,6 +200,7 @@ public class SignupScript extends Commontestcase {
 		logTestCase("TC_AT11_VerifyOtpInvalid");
 		signupPage.iputOTP(otpInvalid);
 		signupPage.clickButtonSubmit();
+		Thread.sleep(2000);
 		signupPage.hoverTooltipOTP();
 		verifyEqual(signupPage.getDynamicText(otpInvalidMsg), "OTP code is invalid");
 	}
@@ -208,9 +208,15 @@ public class SignupScript extends Commontestcase {
 	@Test
 	public void TC_AT12_OpenNewTab() throws InterruptedException, AWTException {
 		logTestCase("TC_AT12_OpenNewTab");
-		signupPage.openNewTabAndSwithchToNewTab(driver);
-//		signupPage.switchToNewTab(driver);
-		signupPage.openUrl(urlYopmail);
+		Robot robot = new Robot();
+		Thread.sleep(2000);
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_T);
+		Thread.sleep(1000);
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+		Thread.sleep(2000);
+		driver.get("http://www.yopmail.com/en/");
 	}
 
 	@Test
@@ -221,80 +227,75 @@ public class SignupScript extends Commontestcase {
 		signupPage.clickButtonCheckEmailYopmail();
 		Thread.sleep(2000);
 	}
-	@Test
-	public static void main(String[] args) {
-		int score = 20;
-		if (score < 50) {
-			System.out.println("You are not pass");
-		}
-		// Ngược lại nếu score lớn hơn hoặc bằng 50 và nhỏ hơn 80.
-		else if (score >= 50 && score < 80) {
-			System.out.println("You are pass");
-		}
-		// Trường hợp còn lại (Nghĩa là lớn hơn hoặc bằng 80)
-		else {
-			System.out.println("You are pass, good student!");
-		}
-
-	}
-
 
 	@Test
 	public void TC_AT14_VerifySystemBigbomSendNotify() throws InterruptedException {
 		logTestCase("TC_AT14_VerifySystemBigbomSendNotify");
 		signupPage.switchToIframe(SignupPageUI.IFRAME_LBN);
-		verifyEqual(signupPage.getDynamicText(bigbomConfirmMsg),
+		verifyEqual(bigbomConfirmMsg,
 				"Chào mừng bạn đã đến với hệ thống Bigbom. Để bắt đầu tận hưởng những tính năng tuyệt vời mà chúng tôi cung cấp, hãy nhập vào mã kích hoạt sau đây:");
 		Thread.sleep(2000);
 		numberOTP = signupPage.getextOTP();
-		signupPage.switchToDefaultContent(driver);
-	}
-
-	public void TC_AT15_ResendOTPCode() throws InterruptedException {
-		logTestCase("TC_AT15_ResendOTPCode");
-		signupPage.switchWindowByTitle(tilePageOTP);
-		signupPage.clickButtonResend();
-		verifyEqual(signupPage.getDynamicText(resendOTPMsg), "Verify email sent, please check your mailbox");
-		Thread.sleep(2000);
-		signupPage.switchWindowByTitle(titleYopmail);
-		Thread.sleep(2000);
-		signupPage.clickButtonCheckEmailYopmail();
-		numberOTP = signupPage.getextOTP();
-		signupPage.switchToDefaultContent(driver);
+		driver.switchTo().defaultContent();
 	}
 
 	@Test
-	public void TC_AT16_VerifyOTP() throws InterruptedException {
-		logTestCase("TC_AT16_VerifyOTP");
+	public void TC_AT15_VerifyOTP() throws InterruptedException {
+		logTestCase("TC_AT15_VerifyOTP");
 		signupPage.switchWindowByTitle(tilePageOTP);
 		signupPage.iputOTP(numberOTP);
 		signupPage.clickButtonSubmit();
-		verifyEqual(signupPage.getDynamicText(registerSuccessfulMsg), "Verification Successful!");
-		verifyEqual(signupPage.getDynamicText(welcomeAccountMsg),
-				"Congratulations! You have successfully verified your account");
+		verifyEqual(registerSuccessfulMsg, "Verification Successful!");
+		verifyEqual(welcomeAccountMsg, "Congratulations! You have successfully verified your account");
 	}
 
 	@Test
-	public void TC_AT17_VeriffySignUpSuccessful() throws InterruptedException {
-		logTestCase("TC_AT17_VeriffySignUpSuccessful");
+	public void TC_AT16_VeriffySignUpSuccessful() throws InterruptedException {
+		logTestCase("TC_AT16_VeriffySignUpSuccessful");
 		signupPage.clickButtonContinue();
-		verifyEqual(signupPage.getDynamicText(welcomeToBigbomMsg), "Welcome to Bigbom!");
-		verifyEqual(signupPage.getDynamicText(getDayStartsFreeMsg),
+		verifyEqual(welcomeToBigbomMsg, "Welcome to Bigbom!");
+		verifyEqual(getDayStartsFreeMsg,
 				"Congratulation! Your 14-day free trial starts today. The trial version offers unlimited access to the full power of Bigbom. You can upgrade at any time during your trial.");
+		verifyEqual(signupPage.getDynamicText(otpInvalidMsg), "expected");
+
 	}
 
 	@Test
-	public void TC_AT18_ClickButtonStartFreeTrial() throws InterruptedException {
-		logTestCase("TC_AT18_ClickButtonStartFreeTrial");
+	public void TC_AT17_ClickButtonStartFreeTrial() throws InterruptedException {
+		logTestCase("TC_AT17_ClickButtonStartFreeTrial");
 		signupPage.clickButtonStartFreeTrial();
-		verifyEqual(signupPage.getDynamicText(activeSuccessfulMsg), "Active Successful!");
-		verifyEqual(signupPage.getDynamicText(getFreeTrialStartedMsg),
-				"Congratulation! Your 14-day free trial started! Thank you.");
+		verifyEqual(activeSuccessfulMsg, "Active Successful!");
+		verifyEqual(getFreeTrialStartedMsg, "Congratulation! Your 14-day free trial started! Thank you.");
 		signupPage.clickButtonOK();
 		Thread.sleep(2000);
 		signupPage.clickButtonSkip();
 		Thread.sleep(2000);
 		loginPage = signupPage.clickLogout();
+	}
+
+	@Test
+	public void TC_AT18_ClickTurnOnActive() throws InterruptedException {
+		logTestCase("TC_AT18_ClickTurnOnActive");
+		signupPage.clickButtonStartFreeTrial();
+		signupPage.clickButtonOK();
+		Thread.sleep(2000);
+		signupPage.clickButtonSkip();
+		Thread.sleep(2000);
+	}
+
+	@Test
+	public void TC_AT19_VerifyButtonShowTurnOn() throws InterruptedException {
+		logTestCase("TC_AT19_VerifyButtonShowTurnOn");
+		logTestCase("TC_AT19_VerifyButtonShowTurnOn");
+		signupPage.acceptAlert(driver);
+		signupPage.click(SignupPageUI.CHECKEMAILYOPMAIL_BTN);
+		signupPage.click(SignupPageUI.CONTINUE_BTN);
+		signupPage.clear(SignupPageUI.CHECKEMAILYOPMAIL_BTN);
+		signupPage.clickButtonStartFreeTrial();
+		signupPage.clickButtonOK();
+		Thread.sleep(2000);
+		signupPage.clickButtonSkip();
+		Thread.sleep(2000);
 	}
 
 	@AfterMethod

@@ -1,12 +1,26 @@
 package com.bigbom.ui;
 
 public class LoginPageUI {
-	public static final String DANGNHAP_TXT = "//div[@class='dropdown right profile-setting pre-activate']//span[contains(text(),'Đăng nhập')]";
-
-	public static final String MOBILEOREMAIL_DANGNHAP_TXT = "//input[@formcontrolname='credential']";
-	public static final String MATKHAU_DANGNHAP_TXT = "//fieldset//input[@id='pwd']";
-
-	public static final String DANGNHAP_LOGIN_BTN = "//fieldset//button[contains(@class,'btn-login')]";
-	public static final String DYNAMIC_MSG = "//*[contains(text(),'%s')]";	
-	public static final String USERNAME_LBL ="//div[@class='name']";
+//	public static final String LOGIN_LOGO_GG = "//div[@class='group-icon']//span[2]//img";
+	public static final String LOGIN_LOGO_GG = "//img[@src='/static/media/google-rounded.7a77769e.svg']";
+	public static final String LOGIN_LOGO_FB = "//div[@class='group-icon']//span[1]//img";
+	public static final String LOGIN_EMAIL_TXT = "//div[@class='input-wrapper']//input[@name='email']";
+	public static final String LOGIN_PASSWORD_TXT = "//div[@class='input-wrapper']//input[@name='password']";
+	public static final String LOGIN_BTN = "//button[@class='sign-in']";
+	public static final String LOGIN_KEEPSIGNED_CKB = "//span[@class='bb-checkbox__checkbox']";
+	public static final String LOGIN_FORGOTPASSWORD_LINK = "//span[contains(text(),'Forgot your password')]";
+	public static final String LOGIN_WARNING_MSG = "//div[@class='ant-message']";
+	public static final String IFRAME_LBL = "//iframe[@id='ssIFrame_google']";
+	public static final String CLOSE_BTN = "//button[contains(text(),'Close')]";
+//loginFB	
+	public static final String LOGIN_EMAIL_FB_TXT = "//input[@id='email']";
+	public static final String LOGIN_PASSWORD_FB_TXT = "//input[@id='pass']";
+	public static final String LOGIN_FB_BTN = "//input[@name='login']";
+	public static final String LOGIN_FB_BTN_CONFIRM = "//button[@name='__CONFIRM__']";
+//verify
+	public static final String VERIFYEMAIL_TITLE = "//div[@class='title']";
+	public static final String VERIFYEMAIL_BTN = "//span[contains(text(),'Continue')]";
+//tooltip
+	public static final String TOOLTIPEMAI_BTN = "//div[@class='input-wrapper']//input[@placeholder='Email']/following-sibling::span";
+	public static final String TOOLTIPPASSWORD_BTN = "//div[@class='input-wrapper']//input[@placeholder='Password']/following-sibling::span";
 }

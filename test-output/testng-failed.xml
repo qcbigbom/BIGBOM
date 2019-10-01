@@ -2,23 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" parallel="tests">
   <parameter name="browser" value="chrome"/>
-  <parameter name="version" value="64"/>
-  <parameter name="url" value="https://www.beecow.com"/>
+  <parameter name="version" value="77.0.3865.40"/>
+  <parameter name="url" value="https://uat-ads.bigbom.net"/>
   <test name="Login BigBom on Chrome(failed)" parallel="tests">
     <parameter name="browser" value="chrome"/>
-    <parameter name="version" value="64"/>
-    <parameter name="url" value="https://www.beecow.com"/>
+    <parameter name="version" value="77.0.3865.40"/>
+    <parameter name="url" value="https://uat-ads.bigbom.net"/>
     <classes>
       <class name="com.bigbom.testcase.LoginScript">
         <methods>
-          <include name="TC_06_LogincorrectEmailWrongPassword"/>
           <include name="BeforeClass"/>
-          <include name="TC_05_LogincorrectEmailPasswordNotEnoughtCharracter"/>
-          <include name="TC_02_LoginWrongSDT"/>
-          <include name="TC_03_LoginWrongEmail"/>
-          <include name="TC_07_LoginCorrectEmailSdtAndPassword"/>
-          <include name="TC_01_LoginEmptyEmailAndPassWord"/>
-          <include name="TC_04_LogincorrectEmailBlankPassword"/>
+          <include name="afterMethod"/>
+          <include name="TC_AT30_SignInWithEmailPasswordVerifySignupPage"/>
+          <include name="AfterClass"/>
         </methods>
       </class> <!-- com.bigbom.testcase.LoginScript -->
     </classes>

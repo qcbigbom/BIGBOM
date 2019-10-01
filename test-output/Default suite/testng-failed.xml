@@ -3,21 +3,15 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.beecow.testcase.CreateProductScript">
+      <class name="com.bigbom.testcase.LoginScript2">
         <methods>
-          <include name="TC_30"/>
-          <include name="TC_24"/>
-          <include name="TC_25"/>
-          <include name="TC_33"/>
-          <include name="TC_34"/>
-          <include name="TC_28"/>
-          <include name="TC_29"/>
-          <include name="TC_26"/>
-          <include name="TC_27"/>
-          <include name="TC_31"/>
-          <include name="TC_32"/>
+          <include name="TC_AT3_7_SignInFailPass"/>
+          <include name="TC_AT3_6_SignInFailEmail"/>
+          <include name="TC_AT3_1_OpenAndClosePopupGG"/>
+          <include name="TC_AT3_2_OpenAndClosePopupFB"/>
+          <include name="TC_AT3_5_SignInAccountHadSignUp"/>
         </methods>
-      </class> <!-- com.beecow.testcase.CreateProductScript -->
+      </class> <!-- com.bigbom.testcase.LoginScript2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

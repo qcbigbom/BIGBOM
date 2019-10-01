@@ -1,9 +1,11 @@
 package CommonPage;
 
+import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Set;
@@ -82,6 +84,14 @@ public class commonFunction extends BasicPage {
 		WebElement element = driver.findElement(By.xpath(locator));
 		return element.getText();
 
+	}
+
+	public String getTextHTML5(String locator) {
+		WebDriverWait wait = new WebDriverWait(driver, timeouts);
+		WebElement html5 = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		String textHtml5 = jsExecutor.executeScript("return arguments[0].validationMessage;", html5).toString();
+		return textHtml5;
 	}
 
 	public void clear(String locator) {
@@ -170,8 +180,9 @@ public class commonFunction extends BasicPage {
 		}
 	}
 
+	// lấy 1 window hiện tại
 	public String getWindow(WebDriver driver) {
-		return driver.getWindowHandle();// lấy 1 window hiện tại
+		return driver.getWindowHandle();
 	}
 
 //ex4
@@ -184,9 +195,18 @@ public class commonFunction extends BasicPage {
 		driver.switchTo().defaultContent();
 	}
 
-//	Excercise3 : WebElement hoverdanhmuc = driver.findElement(By.xpath("//li[@class='sbLi sbLix']//a[@href='#']"));
-//	Actions action = new Actions(driver);
-//	action.moveToElement(hoverdanhmuc).perform();
+	public void openNewTabAndSwithchToNewTab(WebDriver driver) throws AWTException {
+		Robot robot = new Robot();
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_T);
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+	}
+
+	public void switchToNewTab(WebDriver driver) {
+		ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tabs.get(1));
+	}
 
 	public void hover(String locator) {
 		WebElement hoverdanhmuc = driver.findElement(By.xpath(locator));
@@ -201,6 +221,21 @@ public class commonFunction extends BasicPage {
 		action.moveToElement(hoverdanhmuc).perform();
 	}
 
+	public void scrollIntoView(String locator, String... dynamic) throws InterruptedException {
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement element = driver.findElement(By.xpath(locator));
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		Thread.sleep(500);
+	}
+
+//scroll toi option dynamic can chon
+	public void scrollIntoViewDynamic(String locator, String... dynamic) throws InterruptedException {
+		String dynamicLocator = String.format(locator, (Object[]) dynamic);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		WebElement element = driver.findElement(By.xpath(dynamicLocator));
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
+		Thread.sleep(500);
+	}
 //	List<WebElement> listItems = driver.findElements(By.xpath("//ol[@id='selectable']/li"));
 //	Actions action = new Actions(driver);
 //	action.clickAndHold(listItems.get(0)).clickAndHold(listItems.get(11)).click().perform();
@@ -262,6 +297,7 @@ public class commonFunction extends BasicPage {
 
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 		robot.keyRelease(KeyEvent.VK_V);
+
 		Thread.sleep(1000);
 
 		robot.keyPress(KeyEvent.VK_ENTER);

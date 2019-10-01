@@ -31,80 +31,36 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Login BigBom on Chrome</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">7</td><td class="numi">0</td><td class="numi">3.3 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Login BigBom on Chrome</td><td class="numi">12</td><td class="numi">12</td><td class="numi">0</td><td class="numi">0</td><td class="numi">29.4 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
-<tr><th colspan="4">Login BigBom on Chrome &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">com.bigbom.testcase.LoginScript</td><td><a href="#m1"><b>BeforeClass</b>  </a></td><td class="numi">1</td><td>1568097684176</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Login BigBom on Chrome &#8212; skipped (configuration methods)</th></tr>
-<tr class="skippedodd"><td rowspan="1">com.bigbom.testcase.LoginScript</td><td><a href="#m2"><b>AfterClass</b>  </a></td><td class="numi">1</td><td>1568097687465</td><td class="numi">0</td></tr>
-<tr><th colspan="4">Login BigBom on Chrome &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="7">com.bigbom.testcase.LoginScript</td><td><a href="#m3"><b>TC_01_LoginEmptyEmailAndPassWord</b>  </a></td><td class="numi">1</td><td>1568097687445</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m4"><b>TC_02_LoginWrongSDT</b>  </a></td><td class="numi">1</td><td>1568097687448</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m5"><b>TC_03_LoginWrongEmail</b>  </a></td><td class="numi">1</td><td>1568097687451</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m6"><b>TC_04_LogincorrectEmailBlankPassword</b>  </a></td><td class="numi">1</td><td>1568097687454</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m7"><b>TC_05_LogincorrectEmailPasswordNotEnoughtCharracter</b>  </a></td><td class="numi">1</td><td>1568097687457</td><td class="numi">2</td></tr><tr class="skippedodd"><td><a href="#m8"><b>TC_06_LogincorrectEmailWrongPassword</b>  </a></td><td class="numi">1</td><td>1568097687460</td><td class="numi">1</td></tr><tr class="skippedodd"><td><a href="#m9"><b>TC_07_LoginCorrectEmailSdtAndPassword</b>  </a></td><td class="numi">1</td><td>1568097687463</td><td class="numi">1</td></tr>
+<tr><th colspan="4">Login BigBom on Chrome &#8212; passed</th></tr>
+<tr class="passedodd"><td rowspan="12">com.bigbom.testcase.SignupScript</td><td><a href="#m1"><b>TC_AT01_getCurrentUrl</b>  </a></td><td class="numi">1</td><td>1569900720214</td><td class="numi">14</td></tr><tr class="passedodd"><td><a href="#m2"><b>TC_AT02_InputAllEmptyFieldsVerifyNotDisplayButton</b>  </a></td><td class="numi">1</td><td>1569900720240</td><td class="numi">387</td></tr><tr class="passedodd"><td><a href="#m3"><b>TC_AT03_CheckValidateEmailFields</b>  </a></td><td class="numi">1</td><td>1569900720629</td><td class="numi">2490</td></tr><tr class="passedodd"><td><a href="#m4"><b>TC_AT04_CheckValidatePasswordFields</b>  </a></td><td class="numi">1</td><td>1569900723121</td><td class="numi">653</td></tr><tr class="passedodd"><td><a href="#m5"><b>TC_AT05_CheckValidateNumberPhoneFields</b>  </a></td><td class="numi">1</td><td>1569900723775</td><td class="numi">456</td></tr><tr class="passedodd"><td><a href="#m6"><b>TC_AT06_VerifyDisplayButtonSignup</b>  </a></td><td class="numi">1</td><td>1569900724233</td><td class="numi">149</td></tr><tr class="passedodd"><td><a href="#m7"><b>TC_AT07_SignupWithEmailAlready</b>  </a></td><td class="numi">1</td><td>1569900724383</td><td class="numi">857</td></tr><tr class="passedodd"><td><a href="#m8"><b>TC_AT08_SignupNewAcount</b>  </a></td><td class="numi">1</td><td>1569900725241</td><td class="numi">2338</td></tr><tr class="passedodd"><td><a href="#m9"><b>TC_AT09_GoToPageVerifyAcount</b>  </a></td><td class="numi">1</td><td>1569900727580</td><td class="numi">590</td></tr><tr class="passedodd"><td><a href="#m10"><b>TC_AT10_VerifyOtpMustNumber</b>  </a></td><td class="numi">1</td><td>1569900728171</td><td class="numi">375</td></tr><tr class="passedodd"><td><a href="#m11"><b>TC_AT11_VerifyOtpInvalid</b>  </a></td><td class="numi">1</td><td>1569900728547</td><td class="numi">933</td></tr><tr class="passedodd"><td><a href="#m12"><b>TC_AT12_OpenNewTab</b>  </a></td><td class="numi">1</td><td>1569900729481</td><td class="numi">7588</td></tr>
 </table>
 <h1>Login BigBom on Chrome</h1>
-<h2 id="m1">com.bigbom.testcase.LoginScript:BeforeClass</h2>
-<table cellspacing="0" cellpadding="0" class="result">
-<tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th></tr>
-<tr class="param stripe"><td>chrome</td>
-<td>64</td>
-<td>https://www.beecow.com</td>
-</tr>
-<tr><td style="padding-left:3em" colspan="3">
-<p>session not created: Chrome version must be between 71 and 75
-  (Driver info: chromedriver=2.46.628402 (536cd7adbad73a3783fdc2cab92ab2ba7ec361e1),platform=Windows NT 10.0.17134 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 612 milliseconds
-Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
-System info: host: &apos;DESKTOP-HQIM06O&apos;, ip: &apos;192.168.0.136&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_221&apos;
-Driver info: driver.version: ChromeDriver</p>
-sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-<br/>at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-<br/>at java.lang.reflect.Constructor.newInstance(Unknown Source)
-<br/>at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
-<br/>at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
-<br/>at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$new$0(JsonWireProtocolResponse.java:53)
-<br/>at org.openqa.selenium.remote.JsonWireProtocolResponse.lambda$getResponseFunction$2(JsonWireProtocolResponse.java:91)
-<br/>at org.openqa.selenium.remote.ProtocolHandshake.lambda$createSession$0(ProtocolHandshake.java:123)
-<br/>at java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
-<br/>at java.util.Spliterators$ArraySpliterator.tryAdvance(Unknown Source)
-<br/>at java.util.stream.ReferencePipeline.forEachWithCancel(Unknown Source)
-<br/>at java.util.stream.AbstractPipeline.copyIntoWithCancel(Unknown Source)
-<br/>at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-<br/>at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-<br/>at java.util.stream.FindOps$FindOp.evaluateSequential(Unknown Source)
-<br/>at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-<br/>at java.util.stream.ReferencePipeline.findFirst(Unknown Source)
-<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
-<br/>at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:73)
-<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
-<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:209)
-<br/>at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:132)
-<br/>at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:181)
-<br/>at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:168)
-<br/>at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:157)
-<br/>at CommonPage.Commontestcase.openMultiBrowser(Commontestcase.java:33)
-<br/>at com.bigbom.testcase.LoginScript.BeforeClass(LoginScript.java:28)
-<br/>21 lines not shown
-</td></tr>
-</table>
+<h2 id="m1">com.bigbom.testcase.SignupScript:TC_AT10_VerifyOtpMustNumber</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">com.bigbom.testcase.LoginScript:AfterClass</h2>
+<h2 id="m2">com.bigbom.testcase.SignupScript:TC_AT01_getCurrentUrl</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m3">com.bigbom.testcase.LoginScript:TC_03_LoginWrongEmail</h2>
+<h2 id="m3">com.bigbom.testcase.SignupScript:TC_AT07_SignupWithEmailAlready</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m4">com.bigbom.testcase.LoginScript:TC_05_LogincorrectEmailPasswordNotEnoughtCharracter</h2>
+<h2 id="m4">com.bigbom.testcase.SignupScript:TC_AT09_GoToPageVerifyAcount</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m5">com.bigbom.testcase.LoginScript:TC_06_LogincorrectEmailWrongPassword</h2>
+<h2 id="m5">com.bigbom.testcase.SignupScript:TC_AT06_VerifyDisplayButtonSignup</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m6">com.bigbom.testcase.LoginScript:TC_01_LoginEmptyEmailAndPassWord</h2>
+<h2 id="m6">com.bigbom.testcase.SignupScript:TC_AT04_CheckValidatePasswordFields</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m7">com.bigbom.testcase.LoginScript:TC_02_LoginWrongSDT</h2>
+<h2 id="m7">com.bigbom.testcase.SignupScript:TC_AT05_CheckValidateNumberPhoneFields</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m8">com.bigbom.testcase.LoginScript:TC_04_LogincorrectEmailBlankPassword</h2>
+<h2 id="m8">com.bigbom.testcase.SignupScript:TC_AT08_SignupNewAcount</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m9">com.bigbom.testcase.LoginScript:TC_07_LoginCorrectEmailSdtAndPassword</h2>
+<h2 id="m9">com.bigbom.testcase.SignupScript:TC_AT12_OpenNewTab</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m10">com.bigbom.testcase.SignupScript:TC_AT02_InputAllEmptyFieldsVerifyNotDisplayButton</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m11">com.bigbom.testcase.SignupScript:TC_AT11_VerifyOtpInvalid</h2>
+<p class="totop"><a href="#summary">back to summary</a></p>
+<h2 id="m12">com.bigbom.testcase.SignupScript:TC_AT03_CheckValidateEmailFields</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
