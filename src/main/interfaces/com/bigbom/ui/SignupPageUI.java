@@ -21,6 +21,7 @@ public class SignupPageUI {
 	public static final String CHECKEMAILYOPMAIL_BTN = "//input[@class='sbut']";
 	public static final String OTP_LBN = "//p[contains(text(),'ng Bigbom.')]/../following-sibling::div";
 	public static final String IFRAME_LBN = "//td[@class='whc bordfin_gbd alt']//iframe[@class='whc']";
+	public static final String OTPNOTIFY_MSG = "//p[contains(text(),'ng Bigbom.')]";
 	// SignupSuccessfully
 	public static final String CONTINUE_BTN = "//button[@class='bb-button bb-button--primary bb-button--large']";
 	public static final String STARTFREETRIAL_BTN = "//button[contains(text(),'Start Free trial')]";
@@ -29,5 +30,6 @@ public class SignupPageUI {
 	public static final String USER_LBN = "//div[@class='avatar-name small']";
 	public static final String LOGOUT_BTN = "//span[contains(text(),'Logout')]";
 	// Resend
-	public static final String RESEND_BTN = "//button[contains(text(),'Resend')]";
+	public static final String RESEND_BTN = "//button[@class='bb-button btn-no-outline btn-resend bb-button--primary bb-button--small']";
+
 }

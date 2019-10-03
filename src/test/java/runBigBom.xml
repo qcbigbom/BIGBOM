@@ -5,8 +5,9 @@
 		<parameter name="version" value="77.0.3865.40" />
 		<parameter name="url" value="https://uat-ads.bigbom.net" />
 		<classes>
-			<class name="com.bigbom.testcase.SignupScript" />
+<!-- 			<class name="com.bigbom.testcase.SignupScript" /> -->
 <!-- 			<class name="com.bigbom.testcase.LoginScript" /> -->
+			<class name="com.bigbom.testcase.AnalysisScript" />
 		</classes>
 	</test>
 	<!-- <test name="Login Bigbom on Firefox"> -->

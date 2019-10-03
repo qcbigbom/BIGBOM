@@ -3,15 +3,25 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.bigbom.testcase.LoginScript2">
+      <class name="com.bigbom.testcase.SignupScript">
         <methods>
-          <include name="TC_AT3_7_SignInFailPass"/>
-          <include name="TC_AT3_6_SignInFailEmail"/>
-          <include name="TC_AT3_1_OpenAndClosePopupGG"/>
-          <include name="TC_AT3_2_OpenAndClosePopupFB"/>
-          <include name="TC_AT3_5_SignInAccountHadSignUp"/>
+          <include name="TC_AT13_InputEmailYopmailVerify"/>
+          <include name="TC_AT07_SignupWithEmailAlready"/>
+          <include name="TC_AT12_OpenNewTab"/>
+          <include name="TC_AT01_getCurrentUrl"/>
+          <include name="TC_AT02_InputAllEmptyFieldsVerifyNotDisplayButton"/>
+          <include name="TC_AT03_CheckValidateEmailFields"/>
+          <include name="TC_AT08_SignupNewAcount"/>
+          <include name="TC_AT18_ClickButtonStartFreeTrial"/>
+          <include name="TC_AT16_VerifyOTP"/>
+          <include name="TC_AT10_VerifyOtpMustNumber"/>
+          <include name="TC_AT11_VerifyOtpInvalid"/>
+          <include name="TC_AT06_VerifyDisplayButtonSignup"/>
+          <include name="TC_AT04_CheckValidatePasswordFields"/>
+          <include name="TC_AT05_CheckValidateNumberPhoneFields"/>
+          <include name="TC_AT17_VeriffySignUpSuccessful"/>
         </methods>
-      </class> <!-- com.bigbom.testcase.LoginScript2 -->
+      </class> <!-- com.bigbom.testcase.SignupScript -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

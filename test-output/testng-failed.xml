@@ -9,14 +9,13 @@
     <parameter name="version" value="77.0.3865.40"/>
     <parameter name="url" value="https://uat-ads.bigbom.net"/>
     <classes>
-      <class name="com.bigbom.testcase.LoginScript">
+      <class name="com.bigbom.testcase.AnalysisScript">
         <methods>
+          <include name="beforeMethod"/>
           <include name="BeforeClass"/>
-          <include name="afterMethod"/>
-          <include name="TC_AT30_SignInWithEmailPasswordVerifySignupPage"/>
-          <include name="AfterClass"/>
+          <include name="TC_AT01_getCurrentUrl"/>
         </methods>
-      </class> <!-- com.bigbom.testcase.LoginScript -->
+      </class> <!-- com.bigbom.testcase.AnalysisScript -->
     </classes>
   </test> <!-- Login BigBom on Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

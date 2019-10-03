@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="12" passed="12">
+<testng-results skipped="1" failed="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="29436" started-at="2019-10-01T03:31:48Z" finished-at="2019-10-01T03:32:17Z">
+  <suite name="Suite" duration-ms="12341" started-at="2019-10-03T08:49:17Z" finished-at="2019-10-03T08:49:29Z">
     <groups>
     </groups>
-    <test name="Login BigBom on Chrome" duration-ms="29436" started-at="2019-10-01T03:31:48Z" finished-at="2019-10-01T03:32:17Z">
-      <class name="com.bigbom.testcase.SignupScript">
-        <test-method status="PASS" signature="BeforeClass(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="BeforeClass" is-config="true" duration-ms="11703" started-at="2019-10-01T10:31:48Z" finished-at="2019-10-01T10:32:00Z">
+    <test name="Login BigBom on Chrome" duration-ms="12341" started-at="2019-10-03T08:49:17Z" finished-at="2019-10-03T08:49:29Z">
+      <class name="com.bigbom.testcase.AnalysisScript">
+        <test-method status="PASS" signature="BeforeClass(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.bigbom.testcase.AnalysisScript@4cc0edeb]" name="BeforeClass" is-config="true" duration-ms="12321" started-at="2019-10-03T15:49:17Z" finished-at="2019-10-03T15:49:29Z">
           <params>
             <param index="0">
               <value>
@@ -28,239 +28,52 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-10-01T10:32:00Z" finished-at="2019-10-01T10:32:00Z">
+        <test-method status="FAIL" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.AnalysisScript@4cc0edeb]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-03T15:49:29Z" finished-at="2019-10-03T15:49:29Z">
+          <exception class="java.lang.NullPointerException">
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException
+	at com.bigbom.testcase.AnalysisScript.beforeMethod(AnalysisScript.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:564)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:213)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:653)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+	at org.testng.TestRunner.privateRun(TestRunner.java:767)
+	at org.testng.TestRunner.run(TestRunner.java:617)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
+	at org.testng.SuiteRunner.access$000(SuiteRunner.java:37)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:368)
+	at org.testng.internal.thread.ThreadUtil$2.call(ThreadUtil.java:64)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC_AT01_getCurrentUrl()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT01_getCurrentUrl" duration-ms="14" started-at="2019-10-01T10:32:00Z" finished-at="2019-10-01T10:32:00Z">
+        <test-method status="SKIP" signature="TC_AT01_getCurrentUrl()[pri:0, instance:com.bigbom.testcase.AnalysisScript@4cc0edeb]" name="TC_AT01_getCurrentUrl" duration-ms="2" started-at="2019-10-03T15:49:29Z" finished-at="2019-10-03T15:49:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_AT01_getCurrentUrl -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="10" started-at="2019-10-01T10:32:00Z" finished-at="2019-10-01T10:32:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT01_getCurrentUrl status=SUCCESS method=SignupScript.TC_AT01_getCurrentUrl()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="SKIP" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.AnalysisScript@4cc0edeb]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-03T15:49:29Z" finished-at="2019-10-03T15:49:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TC_AT02_InputAllEmptyFieldsVerifyNotDisplayButton()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT02_InputAllEmptyFieldsVerifyNotDisplayButton" duration-ms="387" started-at="2019-10-01T10:32:00Z" finished-at="2019-10-01T10:32:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT02_InputAllEmptyFieldsVerifyNotDisplayButton -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:00Z" finished-at="2019-10-01T10:32:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:00Z" finished-at="2019-10-01T10:32:00Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT02_InputAllEmptyFieldsVerifyNotDisplayButton status=SUCCESS method=SignupScript.TC_AT02_InputAllEmptyFieldsVerifyNotDisplayButton()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TC_AT03_CheckValidateEmailFields()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT03_CheckValidateEmailFields" duration-ms="2490" started-at="2019-10-01T10:32:00Z" finished-at="2019-10-01T10:32:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT03_CheckValidateEmailFields -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:00Z" finished-at="2019-10-01T10:32:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:03Z" finished-at="2019-10-01T10:32:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT03_CheckValidateEmailFields status=SUCCESS method=SignupScript.TC_AT03_CheckValidateEmailFields()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:03Z" finished-at="2019-10-01T10:32:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC_AT04_CheckValidatePasswordFields()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT04_CheckValidatePasswordFields" duration-ms="653" started-at="2019-10-01T10:32:03Z" finished-at="2019-10-01T10:32:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT04_CheckValidatePasswordFields -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:03Z" finished-at="2019-10-01T10:32:03Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT04_CheckValidatePasswordFields status=SUCCESS method=SignupScript.TC_AT04_CheckValidatePasswordFields()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TC_AT05_CheckValidateNumberPhoneFields()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT05_CheckValidateNumberPhoneFields" duration-ms="456" started-at="2019-10-01T10:32:03Z" finished-at="2019-10-01T10:32:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT05_CheckValidateNumberPhoneFields -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:03Z" finished-at="2019-10-01T10:32:03Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:04Z" finished-at="2019-10-01T10:32:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT05_CheckValidateNumberPhoneFields status=SUCCESS method=SignupScript.TC_AT05_CheckValidateNumberPhoneFields()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-10-01T10:32:04Z" finished-at="2019-10-01T10:32:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC_AT06_VerifyDisplayButtonSignup()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT06_VerifyDisplayButtonSignup" duration-ms="149" started-at="2019-10-01T10:32:04Z" finished-at="2019-10-01T10:32:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT06_VerifyDisplayButtonSignup -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:04Z" finished-at="2019-10-01T10:32:04Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT06_VerifyDisplayButtonSignup status=SUCCESS method=SignupScript.TC_AT06_VerifyDisplayButtonSignup()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TC_AT07_SignupWithEmailAlready()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT07_SignupWithEmailAlready" duration-ms="857" started-at="2019-10-01T10:32:04Z" finished-at="2019-10-01T10:32:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT07_SignupWithEmailAlready -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:04Z" finished-at="2019-10-01T10:32:04Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:05Z" finished-at="2019-10-01T10:32:05Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT07_SignupWithEmailAlready status=SUCCESS method=SignupScript.TC_AT07_SignupWithEmailAlready()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TC_AT08_SignupNewAcount()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT08_SignupNewAcount" duration-ms="2338" started-at="2019-10-01T10:32:05Z" finished-at="2019-10-01T10:32:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT08_SignupNewAcount -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:05Z" finished-at="2019-10-01T10:32:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC_AT09_GoToPageVerifyAcount()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT09_GoToPageVerifyAcount" duration-ms="590" started-at="2019-10-01T10:32:07Z" finished-at="2019-10-01T10:32:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT09_GoToPageVerifyAcount -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:07Z" finished-at="2019-10-01T10:32:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT08_SignupNewAcount status=SUCCESS method=SignupScript.TC_AT08_SignupNewAcount()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:07Z" finished-at="2019-10-01T10:32:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC_AT10_VerifyOtpMustNumber()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT10_VerifyOtpMustNumber" duration-ms="375" started-at="2019-10-01T10:32:08Z" finished-at="2019-10-01T10:32:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT10_VerifyOtpMustNumber -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:08Z" finished-at="2019-10-01T10:32:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT09_GoToPageVerifyAcount status=SUCCESS method=SignupScript.TC_AT09_GoToPageVerifyAcount()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:08Z" finished-at="2019-10-01T10:32:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-10-01T10:32:08Z" finished-at="2019-10-01T10:32:08Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT10_VerifyOtpMustNumber status=SUCCESS method=SignupScript.TC_AT10_VerifyOtpMustNumber()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TC_AT11_VerifyOtpInvalid()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT11_VerifyOtpInvalid" duration-ms="933" started-at="2019-10-01T10:32:08Z" finished-at="2019-10-01T10:32:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT11_VerifyOtpInvalid -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:08Z" finished-at="2019-10-01T10:32:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-10-01T10:32:09Z" finished-at="2019-10-01T10:32:09Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT11_VerifyOtpInvalid status=SUCCESS method=SignupScript.TC_AT11_VerifyOtpInvalid()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-10-01T10:32:09Z" finished-at="2019-10-01T10:32:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TC_AT12_OpenNewTab()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="TC_AT12_OpenNewTab" duration-ms="7588" started-at="2019-10-01T10:32:09Z" finished-at="2019-10-01T10:32:17Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TC_AT12_OpenNewTab -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-10-01T10:32:17Z" finished-at="2019-10-01T10:32:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TC_AT12_OpenNewTab status=SUCCESS method=SignupScript.TC_AT12_OpenNewTab()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="AfterClass()[pri:0, instance:com.bigbom.testcase.SignupScript@457e2f02]" name="AfterClass" is-config="true" duration-ms="867" started-at="2019-10-01T10:32:17Z" finished-at="2019-10-01T10:32:17Z">
+        <test-method status="SKIP" signature="AfterClass()[pri:0, instance:com.bigbom.testcase.AnalysisScript@4cc0edeb]" name="AfterClass" is-config="true" duration-ms="0" started-at="2019-10-03T15:49:29Z" finished-at="2019-10-03T15:49:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- AfterClass -->
-      </class> <!-- com.bigbom.testcase.SignupScript -->
+      </class> <!-- com.bigbom.testcase.AnalysisScript -->
     </test> <!-- Login BigBom on Chrome -->
   </suite> <!-- Suite -->
 </testng-results>

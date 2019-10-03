@@ -23,4 +23,10 @@ public class LoginPageUI {
 //tooltip
 	public static final String TOOLTIPEMAI_BTN = "//div[@class='input-wrapper']//input[@placeholder='Email']/following-sibling::span";
 	public static final String TOOLTIPPASSWORD_BTN = "//div[@class='input-wrapper']//input[@placeholder='Password']/following-sibling::span";
+	public static final String TOOLTIPEMAILFORGOT_BTN = "//span[@class='bb-feedback-input__feedback']";
+	// Forgot password
+	public static final String FORGOTPASSWORD_LINK = "//span[contains(text(),'Forgot your password')]";
+	public static final String CANCEL_BTN = "//a[@class='actions__cancel']";
+	public static final String EMAILFORGOT_TXT = "//button[@class='sign-in']";
+	public static final String GETOTP_BTN = "//button[contains(text(),'Get OTP')]";
 }

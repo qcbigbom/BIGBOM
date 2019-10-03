@@ -181,7 +181,7 @@ public class SignupScript extends Commontestcase {
 		signupPage.clickbuttonSignup();
 	}
 
-	@Test
+//	@Test
 	public void TC_AT09_GoToPageVerifyAcount() throws InterruptedException {
 		logTestCase("TC_AT09_GoToPageVerifyAcount");
 		verifyEqual(signupPage.getDynamicText(verifyAcountMsg), "Verify Your Account");
@@ -210,6 +210,7 @@ public class SignupScript extends Commontestcase {
 		logTestCase("TC_AT12_OpenNewTab");
 		signupPage.openNewTabAndSwithchToNewTab(driver);
 //		signupPage.switchToNewTab(driver);
+		Thread.sleep(1000);
 		signupPage.openUrl(urlYopmail);
 	}
 
@@ -220,47 +221,45 @@ public class SignupScript extends Commontestcase {
 		Thread.sleep(2000);
 		signupPage.clickButtonCheckEmailYopmail();
 		Thread.sleep(2000);
-	}
-	@Test
-	public static void main(String[] args) {
-		int score = 20;
-		if (score < 50) {
-			System.out.println("You are not pass");
-		}
-		// Ngược lại nếu score lớn hơn hoặc bằng 50 và nhỏ hơn 80.
-		else if (score >= 50 && score < 80) {
-			System.out.println("You are pass");
-		}
-		// Trường hợp còn lại (Nghĩa là lớn hơn hoặc bằng 80)
-		else {
-			System.out.println("You are pass, good student!");
-		}
-
-	}
-
-
-	@Test
-	public void TC_AT14_VerifySystemBigbomSendNotify() throws InterruptedException {
-		logTestCase("TC_AT14_VerifySystemBigbomSendNotify");
 		signupPage.switchToIframe(SignupPageUI.IFRAME_LBN);
+		String getText = signupPage.getTextDynamicElement(SignupPageUI.OTPNOTIFY_MSG, bigbomConfirmMsg);
+		numberOTP = signupPage.getextOTP();
+
+		if (getText == "Chào mừng bạn đã đến với hệ thống Bigbom. Để bắt đầu tận hưởng những tính năng tuyệt vời mà chúng tôi cung cấp, hãy nhập vào mã kích hoạt sau đây:") {
+			numberOTP = signupPage.getextOTP();
+			signupPage.switchToDefaultContent(driver);
+		} else {
+			signupPage.switchToDefaultContent(driver);
+			signupPage.switchWindowByTitle(tilePageOTP);
+			Thread.sleep(1000);
+			signupPage.clickButtonResend();
+			Thread.sleep(1000);
+			signupPage.switchWindowByTitle(titleYopmail);
+			signupPage.clickButtonCheckEmailYopmail();
+			signupPage.switchToIframe(SignupPageUI.IFRAME_LBN);
+			numberOTP = signupPage.getextOTP();
+			signupPage.switchToDefaultContent(driver);
+		}
+	}
+
+//	@Test
+	public void TC_AT14_InputEmailYopmailVerify() throws InterruptedException {
 		verifyEqual(signupPage.getDynamicText(bigbomConfirmMsg),
 				"Chào mừng bạn đã đến với hệ thống Bigbom. Để bắt đầu tận hưởng những tính năng tuyệt vời mà chúng tôi cung cấp, hãy nhập vào mã kích hoạt sau đây:");
 		Thread.sleep(2000);
-		numberOTP = signupPage.getextOTP();
-		signupPage.switchToDefaultContent(driver);
-	}
 
-	public void TC_AT15_ResendOTPCode() throws InterruptedException {
-		logTestCase("TC_AT15_ResendOTPCode");
+		signupPage.switchToDefaultContent(driver);
 		signupPage.switchWindowByTitle(tilePageOTP);
+		Thread.sleep(1000);
 		signupPage.clickButtonResend();
-		verifyEqual(signupPage.getDynamicText(resendOTPMsg), "Verify email sent, please check your mailbox");
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		signupPage.switchWindowByTitle(titleYopmail);
-		Thread.sleep(2000);
 		signupPage.clickButtonCheckEmailYopmail();
+		signupPage.switchToIframe(SignupPageUI.IFRAME_LBN);
 		numberOTP = signupPage.getextOTP();
 		signupPage.switchToDefaultContent(driver);
+		signupPage.switchToDefaultContent(driver);
+
 	}
 
 	@Test

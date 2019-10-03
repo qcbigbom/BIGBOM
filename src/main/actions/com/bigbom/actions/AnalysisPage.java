@@ -12,9 +12,9 @@ import com.bigbom.ui.SignupPageUI;
 
 import CommonPage.commonFunction;
 
-public class LoginPage extends commonFunction {
+public class AnalysisPage extends commonFunction {
 
-	public LoginPage(WebDriver driver) {
+	public AnalysisPage(WebDriver driver) {
 		super(driver);
 	}
 
@@ -49,10 +49,10 @@ public class LoginPage extends commonFunction {
 		hover(LoginPageUI.TOOLTIPPASSWORD_BTN);
 	}
 
-	public LoginPage clickButtonSignIn() {
+	public AnalysisPage clickButtonSignIn() {
 		waitVisible(LoginPageUI.LOGIN_BTN);
 		click(LoginPageUI.LOGIN_BTN);
-		return PageFactory.initElements(driver, LoginPage.class);
+		return PageFactory.initElements(driver, AnalysisPage.class);
 
 	}
 
@@ -125,17 +125,17 @@ public class LoginPage extends commonFunction {
 	}
 
 //input email password đăng nhập FB
-	public LoginPage clickButtonLoginFB() {
+	public AnalysisPage clickButtonLoginFB() {
 		waitVisible(LoginPageUI.LOGIN_FB_BTN);
 		click(LoginPageUI.LOGIN_FB_BTN);
-		return PageFactory.initElements(driver, LoginPage.class);
+		return PageFactory.initElements(driver, AnalysisPage.class);
 
 	}
 
-	public LoginPage clickAccept_FB() {
+	public AnalysisPage clickAccept_FB() {
 		waitVisible(LoginPageUI.LOGIN_FB_BTN_CONFIRM);
 		click(LoginPageUI.LOGIN_FB_BTN_CONFIRM);
-		return PageFactory.initElements(driver, LoginPage.class);
+		return PageFactory.initElements(driver, AnalysisPage.class);
 	}
 
 	// confirm page
@@ -147,27 +147,27 @@ public class LoginPage extends commonFunction {
 
 	}
 
-	public LoginPage click_verifyEmailPage() {
+	public AnalysisPage click_verifyEmailPage() {
 		waitVisible(LoginPageUI.VERIFYEMAIL_BTN);
 		click(LoginPageUI.VERIFYEMAIL_BTN);
-		return PageFactory.initElements(driver, LoginPage.class);
+		return PageFactory.initElements(driver, AnalysisPage.class);
 
 	}
 
-	public LoginPage Logout() {
+	public AnalysisPage Logout() {
 		waitVisible(LogoutPageUI.LOGOUT_INFOMENU);
 		click(LogoutPageUI.LOGOUT_INFOMENU);
 		waitVisible(LogoutPageUI.LOGOUT_MENU_DDL);
 		click(LogoutPageUI.LOGOUT_MENU_LOGOUT_ITEM);
-		return PageFactory.initElements(driver, LoginPage.class);
+		return PageFactory.initElements(driver, AnalysisPage.class);
 	}
 
-	public LoginPage clickLogout() {
+	public AnalysisPage clickLogout() {
 		waitVisible(SignupPageUI.USER_LBN);
 		click(SignupPageUI.USER_LBN);
 		waitVisible(SignupPageUI.LOGOUT_BTN);
 		click(SignupPageUI.LOGOUT_BTN);
-		return PageFactory.initElements(driver, LoginPage.class);
+		return PageFactory.initElements(driver, AnalysisPage.class);
 	}
 
 	public void clickLinkForgotPassword() {

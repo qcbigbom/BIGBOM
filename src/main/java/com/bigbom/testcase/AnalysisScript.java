@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
+import com.bigbom.actions.AnalysisPage;
 import com.bigbom.actions.DashboardPage;
 import com.bigbom.actions.HomePage;
 import com.bigbom.actions.LoginPage;
@@ -20,12 +21,13 @@ import com.bigbom.actions.SignupPage;
 import CommonPage.Commontestcase;
 import ObjectPageJson.JsonData;
 
-public class DashboardScript extends Commontestcase {
+public class AnalysisScript extends Commontestcase {
 	WebDriver driver;
 	SignupPage signupPage;
 	HomePage homePage;
 	LoginPage loginPage;
 	DashboardPage dashboardPage;
+	AnalysisPage analysisPage;
 	JsonData data;
 	String emailRandom, activeSuccessfulMsg;
 	static String emailCorrect, passwordCorrect;
@@ -34,7 +36,8 @@ public class DashboardScript extends Commontestcase {
 	@BeforeClass
 	public void BeforeClass(String browser, String version, String url) {
 		driver = openMultiBrowser(browser, version, url);
-
+		emailCorrect = "techteam@bigbom.com";
+		passwordCorrect = "Bigbom_tech";
 		data = getDataJson(".\\Data\\Bigbom.json");
 		inititalReport("Signup.html");
 		loginPage = PageFactory.initElements(driver, LoginPage.class);
@@ -45,7 +48,8 @@ public class DashboardScript extends Commontestcase {
 
 	@BeforeMethod
 	public void beforeMethod() {
-		emailRandom = "bigbomqc" + randomName() + "@yopmail.com";
+		dashboardPage.hoverCampaignNameTestAuto();
+		analysisPage = dashboardPage.clickLinkAnalytics();
 
 	}
 
@@ -53,7 +57,8 @@ public class DashboardScript extends Commontestcase {
 	public void TC_AT01_getCurrentUrl() {
 		logTestCase("TC_AT01_getCurrentUrl");
 		String currrentUrl = driver.getCurrentUrl();
-		assertEquals(currrentUrl, "https://uat-ads.bigbom.net/");
+		assertEquals(currrentUrl,
+				"https://uat-ads.bigbom.net/analytics?id=5d957743ff3f0c00113d128b&type=campaign&fbAdAccountId=act_2469378083315956");
 	}
 
 	@AfterMethod
